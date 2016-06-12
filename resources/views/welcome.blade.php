@@ -40,6 +40,7 @@
             <div class="content">
                 <div class="title">Laravel 5 ~Mamriarti</div>
                 <h1>Нужно проверить</h1>
+                <h2>Теперь вместе гитхаб и битбакет</h2>
             </div>
         </div>
     </body>
