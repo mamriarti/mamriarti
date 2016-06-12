@@ -39,6 +39,7 @@
         <div class="container">
             <div class="content">
                 <div class="title">Laravel 5 ~Mamriarti</div>
+                <h1>Нужно проверить</h1>
             </div>
         </div>
     </body>
