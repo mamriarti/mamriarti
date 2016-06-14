@@ -8,9 +8,9 @@ use App\Http\Requests;
 
 class PagesController extends Controller
 {
-    public function index()
+    public function indexpage()
     {
-    	return 'Это моя первая страница';
+    	return view('pages.index');
 
     }
 }
