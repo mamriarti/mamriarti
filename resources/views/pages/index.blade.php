@@ -28,6 +28,7 @@
 	@stop
 
 	@section('footer')
+        <hr>
 		<address>
 		  <strong>Twitter, Inc.</strong><br>
 		  1355 Market Street, Suite 900<br>

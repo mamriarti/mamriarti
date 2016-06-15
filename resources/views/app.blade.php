@@ -9,10 +9,10 @@
 
 	<div class="container">
 	@yield('content')
-	
+
 
 	<div class="footer">
-	<hr>
+
 	@yield('footer')
 	</div>
 	</div>
