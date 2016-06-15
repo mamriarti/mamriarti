@@ -48,8 +48,10 @@ return [
 
         'sqlite' => [
             'driver' => 'sqlite',
-            'database' => env('DB_DATABASE', database_path('database.sqlite')),
+            'database' => database_path('database.sqlite'),
+            //'database' => env('DB_DATABASE', database_path('/Users/mamrenkoalexandra/Codes/mamriarti/database/database.sqlite')),
             'prefix' => '',
+
         ],
 
         'mysql' => [
