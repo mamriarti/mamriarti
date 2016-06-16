@@ -3,15 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Article;
-use Illuminate\Http\Request;
-
+use Carbon\Carbon;
+//use Illuminate\Http\Request;
+use Request;
 use App\Http\Requests;
 
 class ArticlesController extends Controller
 {
     public function articles()
     {
-        $articles = Article::all();
+        $articles = Article::latest('published_at')->get();
+//        $articles = Article::order_by('published_at', 'desc')->get();
         return view('articles.articles', compact('articles'));
 
     }
@@ -23,4 +25,22 @@ class ArticlesController extends Controller
        return view('articles.article', compact('article'));
 
     }
+
+    public function create()
+    {
+
+        return view('articles.create');
+
+    }
+
+
+    public function store()
+    {
+        $input = Request::all();
+        $input['published_at'] = Carbon::now();
+        Article::create($input);
+        return redirect('articles');
+
+    }
+
 }
