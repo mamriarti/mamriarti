@@ -11,7 +11,7 @@ use App\Http\Requests;
 
 class ArticlesController extends Controller
 {
-    public function articles()
+    public function index()
     {
         $articles = Article::latest('published_at')
             ->published()//Ищи в моделе этот класс
@@ -21,7 +21,7 @@ class ArticlesController extends Controller
 
     }
 
-    public function article($id)
+    public function show($id)
     {
 
       $article = Article::findOrFail($id);
