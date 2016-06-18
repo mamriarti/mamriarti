@@ -9,13 +9,15 @@
                        {{ $article->title }}
                    </a>
                 </h3>
+                <div class="media-body">
+                    {{ $article->body }}
+                </div>
+                <div class="">
+                    {{ $article->published_at }}
+                </div>
             </article>
-            <div class="media-body">
-                {{ $article->body }}
-            </div>
-            <div class="">
-                {{ $article->published_at }}
-            </div>
+
+
         @endforeach
     @else
      <h2>Пока нет статей</h2>
