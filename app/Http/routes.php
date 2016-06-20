@@ -13,9 +13,22 @@
 
 Route::get('/', 'PagesController@indexpage');
 
-Route::resource('articles','ArticlesController');
+
 //Route::get('articles','ArticlesController@articles');
 //Route::get('articles/create','ArticlesController@create');
 //Route::get('article/{id}','ArticlesController@article');
 //Route::post('articles','ArticlesController@store');
 
+Route::resource('articles','ArticlesController');
+
+//Route::controllers([
+//    'auth' => 'Auth\AuthController',
+//    'password' => 'Auth\PasswordController',
+//]);
+
+
+
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

@@ -25,6 +25,14 @@ class Article extends Model
         $this->attributes['published_at'] = Carbon::parse($date);
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function writer()
+    {
+        return $this->belongsTo('App\User');
+    }
+
 
 }
 
