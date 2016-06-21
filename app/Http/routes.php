@@ -11,11 +11,7 @@
 |
 */
 
-Route::get('/', 'PagesController@indexpage');
+Route::get('/', 'PagesController@index');
 
 Route::resource('articles','ArticlesController');
-//Route::get('articles','ArticlesController@articles');
-//Route::get('articles/create','ArticlesController@create');
-//Route::get('article/{id}','ArticlesController@article');
-//Route::post('articles','ArticlesController@store');
 
