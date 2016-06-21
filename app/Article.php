@@ -9,6 +9,7 @@ class Article extends Model
 {
     protected $fillable = [
         'title',
+//        'user_id',
         'body',
         'published_at'
 
@@ -28,7 +29,7 @@ class Article extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function writer()
+    public function user()
     {
         return $this->belongsTo('App\User');
     }

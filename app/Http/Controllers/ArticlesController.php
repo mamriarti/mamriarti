@@ -11,6 +11,13 @@ use App\Http\Requests;
 
 class ArticlesController extends Controller
 {
+
+//    public function __construct()
+//    {
+//        $this->middleware('auth');
+//    }
+
+
     public function index()
     {
         $articles = Article::latest('published_at')
@@ -44,6 +51,7 @@ class ArticlesController extends Controller
     public function store(ArticleRequest $request)
     {
         $input = $request->all();
+//        $input['user_id'] = 1;
 //        $input['published_at'] = Carbon::now();
         Article::create($input);
         return redirect('articles');

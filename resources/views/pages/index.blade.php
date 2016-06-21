@@ -2,7 +2,7 @@
 
 	@section('content')
 	<h1>Это набросок моего сайта <small>С блогом</small></h1>
-	
+
 
 
 	@stop
