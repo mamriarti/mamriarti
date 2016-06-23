@@ -15,6 +15,9 @@
                 <div class="">
                     {{ $article->published_at }}
                 </div>
+                <div class="bg-danger">
+                   Автор:  {{ $article->user->name }}
+                </div>
             </article>
 
 
@@ -23,5 +26,5 @@
      <h2>Пока нет статей</h2>
     @endif
 
-    <a href="{{ url('/articles/create')}}"><button type="button" class="btn btn-primary">Добавить статью</button></a>
+
     @stop
