@@ -15,3 +15,7 @@ Route::get('/', 'PagesController@index');
 
 Route::resource('articles','ArticlesController');
 
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
