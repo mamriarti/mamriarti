@@ -8,6 +8,11 @@
 <body>
 
 	<div class="container">
+		{{--@if()--}}
+			{{--<div class="alert alert-success">--}}
+				{{--{{ session::get('status') }}--}}
+			{{--</div>--}}
+		{{--@endif--}}
 	@yield('content')
 
 
