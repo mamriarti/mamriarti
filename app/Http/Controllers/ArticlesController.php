@@ -54,7 +54,8 @@ class ArticlesController extends Controller
     {
 //        $article = new Article($request->all());
         Auth::user()->articles()->create($request->all());
-        $request->session()->flash('status', 'Task was successful!');
+        \Session::flash('message', 'Статья удачно добавлена!!');
+//        $request->session()->flash('status', 'Task was successful!');
 
         return redirect('articles');
 
