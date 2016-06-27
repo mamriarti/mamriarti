@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use App\Http\Requests\ArticleRequest;
+use App\Tag;
 use Carbon\Carbon;
 //use Illuminate\Http\Request;
 
@@ -40,8 +41,8 @@ class ArticlesController extends Controller
 
     public function create()
     {
-
-        return view('articles.create');
+        $tags = Tag::lists('name', 'id');
+        return view('articles.create', compact('tags'));
 
     }
 
@@ -53,7 +54,9 @@ class ArticlesController extends Controller
     public function store(ArticleRequest $request)
     {
 //        $article = new Article($request->all());
-        Auth::user()->articles()->create($request->all());
+        $article = Auth::user()->articles()->create($request->all());
+//        $tagIds = $request->input('tag_list');
+        $article->tags()->attach($request->input('tag_list'));
 //       session()->flash('message', 'Статья удачно добавлена!!');
 //        session()->flash('message_imp', true);
         flash()->overlay('Статья удачно добавлена!!', 'Удачной работы!');
@@ -65,8 +68,10 @@ class ArticlesController extends Controller
 
     public function edit(Article $article)
     {
-//        $article = Article::findOrFail($id);
-        return view('articles.edit', compact('article'));
+
+        $tags = Tag::lists('name', 'id');
+
+        return view('articles.edit', compact('article', 'tags'));
     }
 
     public function update(Article $article, ArticleRequest $request)
