@@ -53,14 +53,13 @@ class ArticlesController extends Controller
      */
     public function store(ArticleRequest $request)
     {
-//        $article = new Article($request->all());
+
         $article = Auth::user()->articles()->create($request->all());
-//        $tagIds = $request->input('tag_list');
+
         $article->tags()->attach($request->input('tag_list'));
-//       session()->flash('message', 'Статья удачно добавлена!!');
-//        session()->flash('message_imp', true);
+
         flash()->overlay('Статья удачно добавлена!!', 'Удачной работы!');
-//        $request->session()->flash('status', 'Task was successful!');
+
 
         return redirect('articles');
 
@@ -76,8 +75,8 @@ class ArticlesController extends Controller
 
     public function update(Article $article, ArticleRequest $request)
     {
-//        $article = Article::findOrFail($id);
         $article->update($request->all());
+        $article->tags()->sync($request->input('tag_list'));
         return redirect('articles');
     }
     
