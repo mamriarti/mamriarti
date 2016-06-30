@@ -19,7 +19,7 @@
 <div class="form-group">
     {!! Form::label('tag_list', 'Теги: ') !!}
 
-    {!! Form::select('tag_list[]',$tags, null, array('class' => 'form-control', 'multiple')) !!}
+    {!! Form::select('tag_list[]', $tags, null, array('class' => 'form-control', 'multiple')) !!}
 </div>
 
 <div class="form-group">
