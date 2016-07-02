@@ -21,7 +21,11 @@ elixir(function(mix) {
 
     mix.styles([
         'libs/select2.min.css',
-        'app.css'
-
-    ])
+        'app.css',
+    ]);
+    mix.scripts([
+        'libs/jquery.js',
+        'libs/bootstrap.min.js',
+        'libs/select2.min.js'
+    ]);
 });

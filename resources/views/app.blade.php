@@ -18,9 +18,9 @@
 
 	</div>
 
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="http://code.jquery.com/jquery.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+
+    <script src="/js/all.js"></script>
+
 	<script>
 		//		$('div.alert').not('.alert-important').delay(3000).slideUp(300);
 		$('#flash-overlay-modal').modal('toggle');
