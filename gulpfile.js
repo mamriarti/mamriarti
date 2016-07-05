@@ -21,11 +21,13 @@ elixir(function(mix) {
 
     mix.styles([
         'libs/select2.min.css',
+        'libs/font-awesome.min.css',
         'app.css',
     ]);
     mix.scripts([
         'libs/jquery.js',
         'libs/bootstrap.min.js',
-        'libs/select2.min.js'
+        'libs/select2.min.js',
+        'libs/a322070dac.js'
     ]);
 });
