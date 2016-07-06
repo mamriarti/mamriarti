@@ -21,13 +21,25 @@ elixir(function(mix) {
 
     mix.styles([
         'libs/select2.min.css',
-        'libs/font-awesome.min.css',
         'app.css',
+        'libs/flexslider.css',
+        'libs/font-awesome.min.css',
+        'libs/styles-1.css',
+        'my_style.css'
     ]);
     mix.scripts([
         'libs/jquery.js',
         'libs/bootstrap.min.js',
         'libs/select2.min.js',
-        'libs/a322070dac.js'
+        'libs/a322070dac.js',
+        'libs/modernizr.min.js',
+        'libs/jquery.easing.1.3.min.js',
+        'libs/waypoints.min.js',
+        'libs/jquery.easypiechart.js',
+        'libs/twitterFetcher_min.js',
+        'libs/jquery.flexslider.min.js',
+        'libs/jquery.fitvids.js',
+        'libs/contact.js',
+        'libs/scripts.js',
     ]);
 });
