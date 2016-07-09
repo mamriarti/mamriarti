@@ -6,24 +6,23 @@
 	@include('partials._favicons')
 	<link rel="stylesheet" href="/css/all.css">
 
+
 	<link href='https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
-	<!-- ==============================================
-            JS
-            =============================================== -->
-
 	<!--[if lt IE 9]>
-	<script src="assets/js/libs/respond.min.js"></script>
+	<script src="/js/respond.min.js"></script>
 	<![endif]-->
 
+	<script type="text/javascript" src="/js/modernizr.min.js"></script>
 
 </head>
 <body data-spy="scroll" data-target="#main-nav" data-offset="400">
+
 @include('partials._main_nav')
 @include('partials._header')
+@include('partials._services')
 		@include('flash::message')
 	    @yield('content')
-
 
 
 

@@ -22,10 +22,10 @@ elixir(function(mix) {
     mix.styles([
         'libs/select2.min.css',
         'app.css',
+        'libs/font-awesome.css',
         'libs/flexslider.css',
-        'libs/font-awesome.min.css',
         'libs/styles-1.css',
-        'my_style.css'
+        'my_style.css',
     ]);
     mix.scripts([
         'libs/jquery.js',
@@ -42,4 +42,6 @@ elixir(function(mix) {
         'libs/contact.js',
         'libs/scripts.js',
     ]);
+
+
 });

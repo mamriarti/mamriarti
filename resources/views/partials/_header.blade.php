@@ -23,4 +23,9 @@
     </div>
 
 </header><!--End header -->
+<div id="main-content">
+
+    <div class="scroll-down">
+        <a href="#services" class="scrollto">Learn More</a>
+    </div>
 
